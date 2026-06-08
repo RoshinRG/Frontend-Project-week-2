@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="DigitalCreative — a forward-thinking web design & development agency delivering beautiful, responsive, high-performance digital experiences.">
+  <title>DigitalCreative — Web Design &amp; Development Agency</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Skip-to-content (Accessibility) -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ═══════════════════════════════════════════
+       STICKY HEADER
+  ═══════════════════════════════════════════ -->
+  <header class="header" role="banner">
+    <div class="header__container">
+
+      <!-- Logo -->
+      <a href="#" class="header__logo" aria-label="DigitalCreative home">
+        <span class="logo__mark" aria-hidden="true">DC</span>
+        <span class="logo__text">DigitalCreative</span>
+      </a>
+
+      <!-- Desktop Nav (shown ≥600 px) -->
+      <nav class="nav nav--desktop" aria-label="Main navigation">
+        <ul class="nav__list" role="list">
+          <li><a href="#services" class="nav__link">Services</a></li>
+          <li><a href="#portfolio" class="nav__link">Portfolio</a></li>
+          <li><a href="#team" class="nav__link">Team</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right controls -->
+      <div class="header__controls">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark / light mode" aria-pressed="false">
+          <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">🌙</span>
+          <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀️</span>
+        </button>
+
+        <!-- Hamburger — triggers Popover API, no JS needed for open/close -->
+        <button
+          class="nav__toggle"
+          popovertarget="mobile-nav"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-nav">
+          <span class="hamburger" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Popover Nav -->
+    <nav id="mobile-nav" class="nav nav--mobile" popover="auto" aria-label="Mobile navigation">
+      <ul class="nav__list" role="list">
+        <li><a href="#services" class="nav__link" popovertarget="mobile-nav" popovertargetaction="hide">Services</a></li>
+        <li><a href="#portfolio" class="nav__link" popovertarget="mobile-nav" popovertargetaction="hide">Portfolio</a></li>
+        <li><a href="#team" class="nav__link" popovertarget="mobile-nav" popovertargetaction="hide">Team</a></li>
+        <li><a href="#contact" class="nav__link" popovertarget="mobile-nav" popovertargetaction="hide">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ═══════════════════════════════════════════
+       MAIN CONTENT
+  ═══════════════════════════════════════════ -->
+  <main class="main" id="main-content">
+
+    <!-- ── HERO ── -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero__content reveal">
+        <span class="hero__badge">✦ Award-winning agency</span>
+        <h1 class="hero__title" id="hero-heading">Creative Digital&nbsp;Solutions<br>for Your Business</h1>
+        <p class="hero__subtitle">We design and develop beautiful, responsive websites that convert visitors into loyal customers — on every device, at every scale.</p>
+        <div class="hero__cta-group">
+          <a href="#contact" class="cta-button cta-button--primary">Get Started →</a>
+          <a href="#portfolio" class="cta-button cta-button--ghost">See Our Work</a>
+        </div>
+        <div class="hero__stats" aria-label="Agency statistics">
+          <div class="stat">
+            <span class="stat__value">150+</span>
+            <span class="stat__label">Projects</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value">98%</span>
+            <span class="stat__label">Satisfaction</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value">12yr</span>
+            <span class="stat__label">Experience</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__media reveal reveal--right">
+        <div class="hero__image-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=700&h=560&fit=crop"
+            alt="Team collaborating on web design project with multiple monitors showing wireframes and design systems"
+            width="700" height="560"
+            class="hero__image"
+            loading="eager"
+            fetchpriority="high">
+          <div class="hero__float-card hero__float-card--1" aria-hidden="true">
+            <span>🚀</span><span>Launch Ready</span>
+          </div>
+          <div class="hero__float-card hero__float-card--2" aria-hidden="true">
+            <span>⚡</span><span>100 Perf Score</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SERVICES ── -->
+    <section class="services section" id="services" aria-labelledby="services-heading">
+      <div class="section__header reveal">
+        <span class="section__eyebrow">What We Do</span>
+        <h2 class="section-title" id="services-heading">Our Services</h2>
+        <p class="section__lead">From concept to launch, we cover every dimension of your digital presence.</p>
+      </div>
+      <div class="services__grid">
+        <article class="service-card reveal">
+          <div class="service-card__icon" aria-hidden="true">🎨</div>
+          <h3 class="service-card__title">Web Design</h3>
+          <p class="service-card__description">Beautiful, user-centric interfaces that engage your audience and reflect your brand identity with pixel-perfect precision.</p>
+          <span class="service-card__arrow" aria-hidden="true">→</span>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__icon" aria-hidden="true">⚙️</div>
+          <h3 class="service-card__title">Development</h3>
+          <p class="service-card__description">Fast, secure, and scalable web applications built with modern technologies and industry best practices.</p>
+          <span class="service-card__arrow" aria-hidden="true">→</span>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__icon" aria-hidden="true">📱</div>
+          <h3 class="service-card__title">Responsive Design</h3>
+          <p class="service-card__description">Mobile-first designs that work flawlessly on every device — from compact phones to ultra-wide displays.</p>
+          <span class="service-card__arrow" aria-hidden="true">→</span>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__icon" aria-hidden="true">📊</div>
+          <h3 class="service-card__title">SEO &amp; Marketing</h3>
+          <p class="service-card__description">Strategic digital marketing and SEO optimisation to drive organic traffic and measurable business growth.</p>
+          <span class="service-card__arrow" aria-hidden="true">→</span>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__icon" aria-hidden="true">🔒</div>
+          <h3 class="service-card__title">Security First</h3>
+          <p class="service-card__description">Enterprise-grade security measures, GDPR compliance, and regular audits to safeguard your data and users.</p>
+          <span class="service-card__arrow" aria-hidden="true">→</span>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__icon" aria-hidden="true">🚀</div>
+          <h3 class="service-card__title">Performance</h3>
+          <p class="service-card__description">Core Web Vitals-optimised builds delivering sub-second load times and exceptional user experiences worldwide.</p>
+          <span class="service-card__arrow" aria-hidden="true">→</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ── PORTFOLIO ── -->
+    <section class="portfolio section" id="portfolio" aria-labelledby="portfolio-heading">
+      <div class="section__header reveal">
+        <span class="section__eyebrow">Our Work</span>
+        <h2 class="section-title" id="portfolio-heading">Recent Projects</h2>
+        <p class="section__lead">A curated selection of digital products we're proud to have built.</p>
+      </div>
+      <div class="portfolio__grid">
+        <article class="portfolio-card reveal">
+          <div class="portfolio-card__image-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1460925895917-afdab684c3c7?w=600&h=400&fit=crop"
+              alt="Analytics dashboard showing real-time data visualisation, bar charts and KPI metrics"
+              width="600" height="400"
+              class="portfolio-card__image"
+              loading="lazy">
+            <div class="portfolio-card__overlay" aria-hidden="true">
+              <span class="portfolio-card__view">View Project →</span>
+            </div>
+          </div>
+          <div class="portfolio-card__content">
+            <span class="portfolio-card__tag">SaaS</span>
+            <h3 class="portfolio-card__title">Analytics Platform</h3>
+            <p class="portfolio-card__description">Real-time data analytics dashboard for e-commerce businesses with live KPI tracking.</p>
+          </div>
+        </article>
+        <article class="portfolio-card reveal">
+          <div class="portfolio-card__image-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1553531088-e9e4f17eeba4?w=600&h=400&fit=crop"
+              alt="Mobile social app UI displaying clean user profiles, feeds and messaging features"
+              width="600" height="400"
+              class="portfolio-card__image"
+              loading="lazy">
+            <div class="portfolio-card__overlay" aria-hidden="true">
+              <span class="portfolio-card__view">View Project →</span>
+            </div>
+          </div>
+          <div class="portfolio-card__content">
+            <span class="portfolio-card__tag">Mobile</span>
+            <h3 class="portfolio-card__title">Social App</h3>
+            <p class="portfolio-card__description">Cross-platform mobile application for social networking built with React Native.</p>
+          </div>
+        </article>
+        <article class="portfolio-card reveal">
+          <div class="portfolio-card__image-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop"
+              alt="E-commerce product grid interface with filter sidebar and shopping cart"
+              width="600" height="400"
+              class="portfolio-card__image"
+              loading="lazy">
+            <div class="portfolio-card__overlay" aria-hidden="true">
+              <span class="portfolio-card__view">View Project →</span>
+            </div>
+          </div>
+          <div class="portfolio-card__content">
+            <span class="portfolio-card__tag">E-Commerce</span>
+            <h3 class="portfolio-card__title">E-Commerce Store</h3>
+            <p class="portfolio-card__description">Full-featured online store with Stripe payment integration and headless CMS.</p>
+          </div>
+        </article>
+        <article class="portfolio-card reveal">
+          <div class="portfolio-card__image-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=600&h=400&fit=crop"
+              alt="Project management Kanban board with drag-and-drop tasks and team collaboration features"
+              width="600" height="400"
+              class="portfolio-card__image"
+              loading="lazy">
+            <div class="portfolio-card__overlay" aria-hidden="true">
+              <span class="portfolio-card__view">View Project →</span>
+            </div>
+          </div>
+          <div class="portfolio-card__content">
+            <span class="portfolio-card__tag">Productivity</span>
+            <h3 class="portfolio-card__title">Project Manager</h3>
+            <p class="portfolio-card__description">Collaborative Kanban-based project management tool with real-time sync for distributed teams.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ── TEAM ── -->
+    <section class="team section" id="team" aria-labelledby="team-heading">
+      <div class="section__header reveal">
+        <span class="section__eyebrow">The People</span>
+        <h2 class="section-title" id="team-heading">Meet Our Team</h2>
+        <p class="section__lead">Passionate craftspeople united by a love for great digital work.</p>
+      </div>
+      <div class="team__grid">
+        <article class="team-member reveal">
+          <div class="team-member__image-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
+              alt="Sarah Johnson, Creative Director"
+              width="400" height="400"
+              class="team-member__image"
+              loading="lazy">
+          </div>
+          <h3 class="team-member__name">Sarah Johnson</h3>
+          <p class="team-member__role">Creative Director</p>
+          <div class="team-member__socials" aria-label="Sarah Johnson social links">
+            <a href="#" class="social-link" aria-label="Sarah Johnson on LinkedIn">in</a>
+            <a href="#" class="social-link" aria-label="Sarah Johnson on Twitter">𝕏</a>
+          </div>
+        </article>
+        <article class="team-member reveal">
+          <div class="team-member__image-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop"
+              alt="Michael Chen, Lead Developer"
+              width="400" height="400"
+              class="team-member__image"
+              loading="lazy">
+          </div>
+          <h3 class="team-member__name">Michael Chen</h3>
+          <p class="team-member__role">Lead Developer</p>
+          <div class="team-member__socials" aria-label="Michael Chen social links">
+            <a href="#" class="social-link" aria-label="Michael Chen on LinkedIn">in</a>
+            <a href="#" class="social-link" aria-label="Michael Chen on GitHub">⌥</a>
+          </div>
+        </article>
+        <article class="team-member reveal">
+          <div class="team-member__image-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop"
+              alt="Emma Davis, UX Designer"
+              width="400" height="400"
+              class="team-member__image"
+              loading="lazy">
+          </div>
+          <h3 class="team-member__name">Emma Davis</h3>
+          <p class="team-member__role">UX Designer</p>
+          <div class="team-member__socials" aria-label="Emma Davis social links">
+            <a href="#" class="social-link" aria-label="Emma Davis on LinkedIn">in</a>
+            <a href="#" class="social-link" aria-label="Emma Davis on Dribbble">◉</a>
+          </div>
+        </article>
+        <article class="team-member reveal">
+          <div class="team-member__image-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop"
+              alt="James Wilson, Marketing Specialist"
+              width="400" height="400"
+              class="team-member__image"
+              loading="lazy">
+          </div>
+          <h3 class="team-member__name">James Wilson</h3>
+          <p class="team-member__role">Marketing Specialist</p>
+          <div class="team-member__socials" aria-label="James Wilson social links">
+            <a href="#" class="social-link" aria-label="James Wilson on LinkedIn">in</a>
+            <a href="#" class="social-link" aria-label="James Wilson on Twitter">𝕏</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ── CTA / CONTACT ── -->
+    <section class="cta-section section" id="contact" aria-labelledby="cta-heading">
+      <div class="cta-section__inner reveal">
+        <span class="section__eyebrow cta-section__eyebrow">Let's Build Together</span>
+        <h2 class="cta-section__title" id="cta-heading">Ready to Start Your Project?</h2>
+        <p class="cta-section__subtitle">Let's create something amazing together. Reach out and we'll respond within one business day.</p>
+        <div class="cta-section__actions">
+          <a href="mailto:info@digitalcreative.com" class="cta-button cta-button--light">Email Us Directly</a>
+          <a href="tel:+15550123" class="cta-button cta-button--ghost-light">+1 (555) 0123</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__container">
+      <div class="footer__brand">
+        <span class="logo__mark footer__logo-mark" aria-hidden="true">DC</span>
+        <p class="footer__tagline">Forward-thinking digital solutions for brands that dare to lead.</p>
+      </div>
+      <div class="footer__section">
+        <h3 class="footer__heading">Services</h3>
+        <ul class="footer__list" role="list">
+          <li><a href="#services" class="footer__link">Web Design</a></li>
+          <li><a href="#services" class="footer__link">Development</a></li>
+          <li><a href="#services" class="footer__link">SEO &amp; Marketing</a></li>
+          <li><a href="#services" class="footer__link">Security</a></li>
+        </ul>
+      </div>
+      <div class="footer__section">
+        <h3 class="footer__heading">Company</h3>
+        <ul class="footer__list" role="list">
+          <li><a href="#team" class="footer__link">Our Team</a></li>
+          <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
+          <li><a href="#" class="footer__link">Careers</a></li>
+          <li><a href="#" class="footer__link">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer__section">
+        <h3 class="footer__heading">Contact</h3>
+        <ul class="footer__list" role="list">
+          <li><a href="mailto:info@digitalcreative.com" class="footer__link">info@digitalcreative.com</a></li>
+          <li><a href="tel:+15550123" class="footer__link">+1 (555) 0123</a></li>
+          <li><a href="#" class="footer__link">LinkedIn</a></li>
+          <li><a href="#" class="footer__link">Twitter / 𝕏</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">&copy; 2025 DigitalCreative. All rights reserved.</p>
+      <p class="footer__legal"><a href="#" class="footer__link">Privacy</a> · <a href="#" class="footer__link">Terms</a></p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════
+       MINIMAL JS — Theme toggle + scroll reveals
+       (nav open/close handled by HTML Popover API)
+  ═══════════════════════════════════════════ -->
+  <script>
+    /* ── Theme toggle ── */
+    const toggle = document.getElementById('theme-toggle');
+    const stored = localStorage.getItem('dc-theme');
+    if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.dataset.theme = 'dark';
+      toggle.setAttribute('aria-pressed', 'true');
+    }
+    toggle.addEventListener('click', () => {
+      const isDark = document.documentElement.dataset.theme === 'dark';
+      document.documentElement.dataset.theme = isDark ? 'light' : 'dark';
+      toggle.setAttribute('aria-pressed', String(!isDark));
+      localStorage.setItem('dc-theme', isDark ? 'light' : 'dark');
+    });
+
+    /* ── Scroll reveal (IntersectionObserver) ── */
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('reveal--visible'); io.unobserve(e.target); } });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('reveal--visible'));
+    }
+
+    /* ── Update hamburger aria-expanded via popover events ── */
+    const mobileNav = document.getElementById('mobile-nav');
+    const hamburger = document.querySelector('.nav__toggle');
+    if (mobileNav && hamburger) {
+      mobileNav.addEventListener('toggle', (e) => {
+        hamburger.setAttribute('aria-expanded', String(e.newState === 'open'));
+      });
+    }
+  </script>
+</body>
+</html>
